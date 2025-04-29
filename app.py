@@ -13,20 +13,20 @@ from flask_mail import Mail, Message
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///IZIWORK-BDD.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = ''
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = '123456789'  # N'oubliez pas de mettre une clé secrète sécurisée
+app.config['SECRET_KEY'] = ''  # N'oubliez pas de mettre une clé secrète sécurisée
 
 db = SQLAlchemy(app)
 
 # Configuration de Flask-Mail
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'  # Remplacez par votre serveur SMTP
-app.config['MAIL_PORT'] = 587
+app.config['MAIL_SERVER'] = ''  # Remplacez par votre serveur SMTP
+app.config['MAIL_PORT'] = ''
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'nathan.linet2304@gmail.com'  # Remplacez par votre e-mail
-app.config['MAIL_PASSWORD'] = 'kyjo nevb tcom njau'  # Remplacez par votre mot de passe
-app.config['MAIL_DEFAULT_SENDER'] = 'nathan.linet2304@gmail.com'  # Remplacez par votre e-mail
-app.config['CONTACT_EMAIL'] = 'nathan.linet23@gmail.com'
+app.config['MAIL_USERNAME'] = ''  # Remplacez par votre e-mail
+app.config['MAIL_PASSWORD'] = ''  # Remplacez par votre mot de passe
+app.config['MAIL_DEFAULT_SENDER'] = ''  # Remplacez par votre e-mail
+app.config['CONTACT_EMAIL'] = ''
 
 mail = Mail(app)
 
